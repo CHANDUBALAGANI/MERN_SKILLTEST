@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .actions a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile </th>
+                <th>Designation</th>
+                <th>Gender</th>
+                <th>Courses</th>
+                <th>img_upload</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.email }}</td>
+                    <td>{{ employee.mobile }}</td>
+                    <td>{{ employee.designation }}</td>
+                    <td>{{ employee.gender }}</td>
+                    <td>{{ employee.courses }}</td>
+                    <td>
+                        {% if employee.img_upload %}
+                            <img src="{{ employee.img_upload.url }}" alt="{{ employee.name }}" width="50">
+                        {% else %}
+                            No img_upload
+                        {% endif %}
+                    </td>
+                    <td class="actions">
+                         <a href="{% url 'employee_detail' employee.id %}">View</a>
+                         <a href="{% url 'employee_edit' pk=employee.id %}">Edit</a>
+
+
+                         <a href="{% url 'employee_delete' employee.id %}">Delete</a>
+                     </td>
+                     
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="9" style="text-align: center;">No employees found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'dashboard' %}">Back to Dashboard</a>
+</body>
+</html>
+
+
+
+
+
+

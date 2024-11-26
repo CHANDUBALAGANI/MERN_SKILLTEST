@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+     font-family: 'Arial', sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f7f7f7;
+ }
+ 
+ /* Header Style */
+ header {
+     background-color: #ffc107;  /* Yellow */
+     padding: 20px;
+     text-align: center;
+     font-size: 24px;
+     color: white;
+     font-weight: bold;
+ }
+ 
+ /* Main form container */
+ form {
+     max-width: 700px;
+     margin: 30px auto;
+     background: #fff;
+     padding: 30px;
+     border-radius: 8px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ form div {
+     margin-bottom: 15px;
+ }
+ 
+ /* Label Styling */
+ form label {
+     font-size: 16px;
+     font-weight: bold;
+     display: block;
+     margin-bottom: 5px;
+     color: #333;
+ }
+ 
+ /* Input Styling */
+ form input[type="text"],
+ form input[type="email"],
+ form input[type="file"],
+ form select,
+ form textarea {
+     width: 100%;
+     padding: 10px;
+     font-size: 14px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+ }
+ 
+ form input[type="radio"],
+ form input[type="checkbox"] {
+     margin-right: 10px;
+ }
+ 
+ /* Submit Button */
+ form button {
+     background-color: #28a745;  /* Green */
+     color: white;
+     padding: 12px 25px;
+     border: none;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+     width: 100%;
+     margin-top: 20px;
+ }
+ 
+ form button:hover {
+     background-color: #218838;
+ }
+ 
+ /* Link styling (for Back to List) */
+ a {
+     color: #007bff;
+     text-decoration: none;
+     display: inline-block;
+     margin-top: 20px;
+ }
+ 
+ a:hover {
+     text-decoration: underline;
+ }
+ 
+ /* Error Messages */
+ form .error-message {
+     color: red;
+     font-size: 12px;
+     margin-top: 5px;
+ }
+ 
+ h1 {
+     text-align: center;
+     color: #333;
+     font-size: 24px;
+     margin-top: 50px;
+ }
+ 
+
+
+ body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

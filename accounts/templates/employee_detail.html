@@ -1,0 +1,28 @@
+
+
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <title>Employee Detail</title>
+</head>
+<body >
+    <h1>Employee Detail</h1>
+    <p><strong>Name:</strong> {{ employee.name }}</p>
+    <p><strong>Email:</strong> {{ employee.email }}</p>
+    <p><strong>Mobile:</strong> {{ employee.mobile }}</p>
+    <p><strong>Designation:</strong> {{ employee.designation }}</p>
+    <p><strong>Gender:</strong> {{ employee.gender }}</p>
+    <p><strong>Courses:</strong> {{ employee.courses }}</p>
+    <p><strong>Image:</strong>{{employee.image}}
+        {% if employee.image %}
+            <img src="{{ employee.img.url }}" alt="{{ employee.name }}" width="150">
+        {% else %}
+            No Image
+        {% endif %}
+    </p>
+    <a href="{% url 'employee_list' %}">Back to Employee List</a>
+</body>
+</html>
+
+{%endblock%}
